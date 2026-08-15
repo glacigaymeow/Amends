@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "amends",
+	"version": "${version}",
+	"name": "Amends",
+	"description": "Tying some loose ends, and some confetti :3",
+	"authors": [
+		"Gay Meow!"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/organization/gay-meow",
+		"sources": "https://github.com/glacigaymeow/Amends"
+	},
+	"license": "MIT-License",
+	"icon": "assets/amends/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.gaymeow.amends.Amends"
+		],
+		"fabric-datagen": [
+			"net.gaymeow.amends.AmendsDataGenerator"
+		]
+	},
+	"mixins": [
+		"amends.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
