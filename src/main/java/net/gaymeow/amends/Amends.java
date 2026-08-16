@@ -2,6 +2,7 @@ package net.gaymeow.amends;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.gaymeow.amends.item.ModItems;
 import net.minecraft.resources.Identifier;
 
 import org.slf4j.Logger;
@@ -15,11 +16,13 @@ public class Amends implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	// This code runs as soon as Minecraft is in a mod-load-ready state.
+	// However, some things (like resources) may still be uninitialized.
+	// Proceed with mild caution.
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+
+		ModItems.registerModItems();
 
 		LOGGER.info("Hello Fabric world!");
 	}
